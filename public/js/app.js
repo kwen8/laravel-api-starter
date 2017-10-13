@@ -46454,9 +46454,11 @@ var Example = function (_Component) {
   _createClass(Example, [{
     key: 'componentWillMount',
     value: function componentWillMount() {
+      //测试api接口
       axios.post('/authorizations', {
-        name: 'kkk',
-        email: '418415881@qq.com'
+        name: 'admin',
+        email: 'admin@admin.com',
+        password: 'admin'
       }).then(function (data) {
         console.log(data);
       });

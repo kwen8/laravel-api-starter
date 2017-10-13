@@ -45,6 +45,11 @@ $ php artisan migrate
 $ php artisan db:seed (默认添加了10个用户)
 
 头信息中可以增加 Accept:application/vnd.app.v1+json 切换v1和v2版本
+
+// 前端部分
+
+$ npm install && npm run prod 生成编译文件
+$ npm run watch-poll 使用browsersync进行开发
 ```
 
 如果访问一直不对，可以进入public 目录执行 `php -S localhost:8000 -t public`，然后尝试调用几个接口，从而确定是否为web服务器的配置问题。

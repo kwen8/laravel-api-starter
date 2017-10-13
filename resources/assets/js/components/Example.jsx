@@ -3,9 +3,11 @@ import ReactDOM from 'react-dom';
 
 export default class Example extends Component {
   componentWillMount () {
+    //测试api接口
     axios.post('/authorizations', {
-      name: 'kkk',
-      email: '418415881@qq.com'
+      name: 'admin',
+      email: 'admin@admin.com',
+      password: 'admin'
     }).then((data) => {
       console.log(data);
     })
