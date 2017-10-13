@@ -46362,8 +46362,11 @@ __webpack_require__("./resources/assets/js/index.jsx");
 /***/ }),
 
 /***/ "./resources/assets/js/bootstrap.js":
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__config__ = __webpack_require__("./resources/assets/js/config/index.js");
 
 window._ = __webpack_require__("./node_modules/lodash/lodash.js");
 
@@ -46388,7 +46391,7 @@ try {
 window.axios = __webpack_require__("./node_modules/axios/index.js");
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
-
+window.axios.defaults.baseURL = __WEBPACK_IMPORTED_MODULE_0__config__["a" /* default */].API_URL;
 /**
  * Next we will register the CSRF Token as a common header with Axios so that
  * all outgoing HTTP requests automatically have it attached. This is just
@@ -46440,55 +46443,75 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 var Example = function (_Component) {
-    _inherits(Example, _Component);
+  _inherits(Example, _Component);
 
-    function Example() {
-        _classCallCheck(this, Example);
+  function Example() {
+    _classCallCheck(this, Example);
 
-        return _possibleConstructorReturn(this, (Example.__proto__ || Object.getPrototypeOf(Example)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (Example.__proto__ || Object.getPrototypeOf(Example)).apply(this, arguments));
+  }
+
+  _createClass(Example, [{
+    key: 'componentWillMount',
+    value: function componentWillMount() {
+      axios.post('/authorizations', {
+        name: 'kkk',
+        email: '418415881@qq.com'
+      }).then(function (data) {
+        console.log(data);
+      });
     }
-
-    _createClass(Example, [{
-        key: 'render',
-        value: function render() {
-            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+  }, {
+    key: 'render',
+    value: function render() {
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        'div',
+        { className: 'container' },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'div',
+          { className: 'row' },
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'div',
+            { className: 'col-md-8 col-md-offset-2' },
+            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+              'div',
+              { className: 'panel panel-default' },
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
-                { className: 'container' },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
-                    { className: 'row' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'div',
-                        { className: 'col-md-8 col-md-offset-2' },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'div',
-                            { className: 'panel panel-default' },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'div',
-                                { className: 'panel-heading' },
-                                'Example Component'
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'div',
-                                { className: 'panel-body' },
-                                'I\'m an example component!'
-                            )
-                        )
-                    )
-                )
-            );
-        }
-    }]);
+                { className: 'panel-heading' },
+                'Example Component'
+              ),
+              __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                'div',
+                { className: 'panel-body' },
+                'I\'m an example component!'
+              )
+            )
+          )
+        )
+      );
+    }
+  }]);
 
-    return Example;
+  return Example;
 }(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
 
 /* harmony default export */ __webpack_exports__["a"] = (Example);
 
 
 if (document.getElementById('root')) {
-    __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Example, null), document.getElementById('root'));
+  __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Example, null), document.getElementById('root'));
 }
+
+/***/ }),
+
+/***/ "./resources/assets/js/config/index.js":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = ({
+  API_URL: 'http://laravel-api-react.app/api'
+});
 
 /***/ }),
 
