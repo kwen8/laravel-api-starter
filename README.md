@@ -1,11 +1,10 @@
 # laravel-api-starter
 
-这是一个 Laravel 5.5 + JWT 的基础项目
+这是一个 Laravel 5.5 + JWT 的基础项目 forked from liyu001989/laravel-api-starter
 
-[![StyleCI](https://styleci.io/repos/95127265/shield)](https://styleci.io/repos/95127265)
-[![License](https://img.shields.io/github/license/liyu001989/laravel-api-starter.svg)](LICENSE)
-[![donate](https://img.shields.io/badge/paypal-donate-red.svg)](https://paypal.me/liyu001989)
-[![donate](https://img.shields.io/badge/%E7%BA%A2%E5%8C%85-donate-red.svg)](https://cloud.githubusercontent.com/assets/2981799/25706351/cfba493c-3112-11e7-9985-aec05ff9734c.png)
+新增加了Laravel 5.5官方前端脚手架react，并加入redux进行状态管理，初始化user的reducer，加入browsersync快速开发
+
+希望喜欢react和laravel的朋友可以forked并欢迎提pr，有问题可issue
 
 
 - laravel/RESTful 交流群: 216721539
